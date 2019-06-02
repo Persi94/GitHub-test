@@ -37,6 +37,7 @@ nav{
     outline: none;
 }
 .search-form:focus{
+    background-color: white;
     width: 450px;
 }
 /* Navbar right menu */
