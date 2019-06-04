@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <title></title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
     <header>
         <nav>
@@ -29,7 +27,7 @@
                     <li><a href="#"><img src="images/bell-icon.png" alt="bell" class="bell"></a></li>
                     <li>
                         <div class="dropdown-1">
-                            <img src="images/plus-icon.png" onclick="myFunction()" alt="plus" class="plus drop-button-1">
+                            <img src="images/plus-icon.png" onclick="btnFunction()" alt="plus" class="plus drop-button-1">
                             <ul id="my-dropdown-1" class="dropdown-content-1">
                                 <li><a href="#">New repository</a></li>
                                 <li><a href="#">Import repository</a></li>
@@ -41,7 +39,7 @@
                     </li>
                     <li>
                         <div class="dropdown-2">
-                            <img src="images/user-icon.png" onclick="myFunction()" alt="user" class="user drop-button-2">
+                            <img src="images/user-icon.png" onclick="btnFunction()" alt="user" class="user drop-button-2">
                             <ul id="my-dropdown-2" class="dropdown-content-2">
                                 <li>
                                     <p>Signed in as <a href="#">Someone</a></p>
@@ -62,10 +60,30 @@
             </div>
         </nav>
     </header>
-
+    <section>
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="new-repository">
+                    <p>Repository</p>
+                    <a href="#"><button><img src="images/white-repository-icon.png" alt="white-repository"><p>New</p></button></a>
+                </div>
+                <input type="text" name="search" placeholder="Find a repository...">
+                <ul>
+                    <li>
+                        <div><img src="images/repository-icon.png" alt="repository"><a href="#">Persi94/GitHub-test</a></div>
+                    </li>
+                    <li>
+                        <div><img src="images/repository-icon.png" alt="repository"><a href="#">Persi94/HTML-test</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-content">123</div>
+        <div class="news-column">123</div>
+    </section>
     <!-- Dropdown menu button script -->
     <script>
-        function myFunction(){
+        function btnFunction(){
             document.getElementById('my-dropdown-1').classList.toggle("dropdown-show");
             document.getElementById('my-dropdown-2').classList.toggle("dropdown-show");
         }

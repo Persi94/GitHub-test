@@ -2,6 +2,7 @@ body{
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+/* Navbar */
 nav{
     display: flex;
     justify-content: space-between;
@@ -37,7 +38,7 @@ nav{
     outline: none;
 }
 .search-form:focus{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     width: 450px;
 }
 /* Navbar right menu */
@@ -63,7 +64,7 @@ nav{
     padding: 10px 10px;
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: rgb(255, 255, 255);
     z-index: 1;
     list-style: none;
     width: 150px;
@@ -101,4 +102,106 @@ nav{
 .bell, .plus, .user{
     width: 80%;
     height: 80%;
+}
+/* Content */
+section{
+    background-color: rgb(238, 238, 238);
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+/* Sidebar */
+.sidebar{
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    flex: 0.26;
+    border-right: 1px solid rgb(219, 219, 219);
+}
+.sidebar-content{
+    padding-top: 30px;
+    flex: 0.9;
+    justify-content: baseline; 
+}
+.new-repository{
+    display: flex;
+    justify-content: space-between;
+    font-size: 85%;
+    padding-bottom: 10px;
+}
+.new-repository > p{
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+/* Repository button */
+.new-repository > a{
+    text-decoration: none;
+}
+.new-repository > a > button{
+    background: linear-gradient(to top, rgb(0, 161, 0), rgb(0, 202, 0));
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid rgb(37, 194, 37);
+    display: flex;
+    align-items: center;
+}
+.new-repository > a > button > img{
+    width: 32%;
+    height: 32%;
+    margin-left: 2px;
+}
+.new-repository > a > button > p{
+    color: rgb(255, 255, 255);
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+.new-repository a button:hover{
+    border: 1px solid rgb(21, 109, 21);
+    cursor: pointer;
+}
+/* Repository search */
+.sidebar-content > input{
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 1px solid rgb(209, 213, 218);
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(27,31,35,.075);
+    outline: none;
+}
+.sidebar-content > input::placeholder{
+    padding-left: 8px;
+}
+.sidebar-content > input:focus{
+    border: 1px solid rgb(0, 84, 163);
+    box-shadow: 0px 0px 0px 3px rgba(77, 169, 255, 0.418);
+}
+.sidebar-content > input::placeholder{
+    color: rgb(172, 172, 172);
+}
+/* Repository history */
+.sidebar-content ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+.sidebar-content ul li div{
+    display: flex;
+    align-self: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.sidebar-content ul li div > a{
+    font-size: 80%;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(11, 137, 255);
+}
+.sidebar-content ul li div a:hover{
+    text-decoration: underline;
+}
+.sidebar-content ul li div > img{
+    width: 6%;
+    height: 6%;
 }
