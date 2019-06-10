@@ -10,6 +10,7 @@
 <body>
     <header>
         <nav>
+            <!-- Desktop version -->
             <div class="left-menu">
                 <ul>
                     <li><a href="#"><img src="images/logo-icon.png" alt="logo" class="logo"></a></li>
@@ -27,8 +28,9 @@
                     <li><a href="#"><img src="images/bell-icon.png" alt="bell" class="bell"></a></li>
                     <li>
                         <div class="dropdown-1">
-                            <img src="images/plus-icon.png" onclick="btnFunction()" alt="plus" class="plus drop-button-1">
+                            <img src="images/plus-icon.png" id="drop-button-1" alt="plus" class="plus">
                             <ul id="my-dropdown-1" class="dropdown-content-1">
+                                <!-- onclick="btnFunction1()" -->
                                 <li><a href="#">New repository</a></li>
                                 <li><a href="#">Import repository</a></li>
                                 <li><a href="#">New gist</a></li>
@@ -39,8 +41,9 @@
                     </li>
                     <li>
                         <div class="dropdown-2">
-                            <img src="images/user-icon.png" onclick="btnFunction()" alt="user" class="user drop-button-2">
+                            <img src="images/user-icon.png" id="drop-button-2" alt="user" class="user">
                             <ul id="my-dropdown-2" class="dropdown-content-2">
+                                <!-- onclick="btnFunction1()" -->
                                 <li>
                                     <p>Signed in as <a href="#">Someone</a></p>
                                 </li>
@@ -58,9 +61,28 @@
                     </li>
                 </ul>
             </div>
+            <!-- Mobile version -->
+            <div class="mobile-navbar">
+                <img src="images/menu-icon.png" alt="logo" id="mobile-menu" class="mobile-menu">
+                <a href="#"><img src="images/logo-icon.png" alt="logo" class="mobile-logo"></a>
+                <a href="#"><img src="images/bell-icon.png" alt="bell" class="mobile-bell"></a>
+            </div>
+            <ul id="mobile-links">
+                <li>
+                    <input type="text" name="search" placeholder="Search or jump to..." class="mobile-search">
+                </li>
+                <li><a href="#">Dashboed</a></li>
+                <li><a href="#">Pull requests</a></li>
+                <li><a href="#">Issues</a></li>
+                <li><a href="#">Marketplace</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Someone</a></li>
+                <li><a href="#">Sign Out</a></li>
+            </ul>
         </nav>
     </header>
     <section>
+        <!-- Sidebar -->
         <div class="sidebar">
             <div class="sidebar-content">
                 <div class="new-repository">
@@ -78,37 +100,100 @@
                 </ul>
             </div>
         </div>
-        <div class="main-content">123</div>
-        <div class="news-column">123</div>
+        <!-- Main content -->
+        <div class="main-content">
+            <div class="box-1">
+                <div id="main-exit"><img src="images/exit-icon.png" alt="exit"></div>
+                <div class="content-block" id="main-close">
+                    <h1>Learn Git and GitHub without any code!</h1>
+                    <p>Using the Hello World guide, you’ll create a repository, start a branch, write comments, and open a pull request.</p>
+                    <div>
+                        <button class="green-btn"><p>Read the guide</p></button>
+                        <button class="grey-btn"><p>Start a project</p></button>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-repopsitory">
+                <p>Repository</p>
+                <div>
+                    <input type="text" name="search" placeholder="Find a repository...">
+                    <ul>
+                        <li>
+                            <div><img src="images/repository-icon.png" alt="repository"><a href="#">Persi94/GitHub-test</a></div>
+                        </li>
+                        <li>
+                            <div><img src="images/repository-icon.png" alt="repository"><a href="#">Persi94/HTML-test</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box-2">
+                <div class="name-comment">
+                    <img src="images/user-icon.png" alt="user">
+                </div>
+                <div class="comment">
+                    <p><a href="#">JohnDoe</a> star following you 7 days ago</p>
+                    <div>
+                        <div>
+                            <img src="images/user-icon.png" alt="user">
+                            <a href="#"><div><h4>JohnDoe</h4><p>12 repositories</p></div></a>
+                        </div>
+                        <button class="comment-button"><p>Follow</p></button>
+                    </div>
+                </div>
+            </div>
+            <div class="box-3">
+                <div>
+                    <img src="images/lamp-icon.png" alt="lamp"><p>ProTip! The feed shows you events from people you <a href="#">follow</a> and repositories you <a href="#">watch</a>.</p>
+                </div>
+                <div>
+                    <a href="#"><img src="images/signal-icon.png" alt="signal"><p>Subscribe to your news feed</p></a>
+                </div>
+            </div>
+        </div>
+        <!-- Repository news -->
+        <div class="news-column">
+            <div class="first-news">
+                123
+            </div>
+            <div class="second-news">
+                123
+            </div>
+            <h4>Discover repositories</h4>
+            <div class="other-repositories">
+                123
+            </div>
+        </div>
     </section>
     <!-- Dropdown menu button script -->
     <script>
-        function btnFunction(){
-            document.getElementById('my-dropdown-1').classList.toggle("dropdown-show");
-            document.getElementById('my-dropdown-2').classList.toggle("dropdown-show");
-        }
-        window.onclick = function(event){
-            if(!event.target.matches('.drop-button-1')){
-                var dropdowns = document.getElementsByClassName("dropdown-content-1");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('dropdown-show')) {
-                        openDropdown.classList.remove('dropdown-show');
-                    }
-                }
-            }
-            if(!event.target.matches('.drop-button-2')){
-                var dropdowns = document.getElementsByClassName("dropdown-content-2");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('dropdown-show')) {
-                        openDropdown.classList.remove('dropdown-show');
-                    }
-                }
-            }
-        }
+        var btn1 = document.getElementById('drop-button-1');
+        var dropContent1 = document.getElementById('my-dropdown-1');
+        btn1.addEventListener('click', function(e){
+            dropContent1.classList.toggle('dropdown-show');
+            e.preventDefault();
+        });
+    </script>
+    <script>
+        var btn2 = document.getElementById('drop-button-2');
+        var dropContent2 = document.getElementById('my-dropdown-2');
+        btn2.addEventListener('click', function(e){
+            dropContent2.classList.toggle('dropdown-show');
+            e.preventDefault();
+        });
+    </script>
+    <!-- Window boxes script -->
+    <script>
+
+    </script>
+    <!-- Mobile menu nutton script -->
+    <script>
+        var menu = document.getElementById('mobile-menu');
+        var links = document.getElementById('mobile-links');
+        menu.addEventListener('click', function(e){
+            links.classList.toggle('mobile-content');
+            e.preventDefault();
+        });
     </script>
 </body>
 </html>
