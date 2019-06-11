@@ -102,9 +102,9 @@
         </div>
         <!-- Main content -->
         <div class="main-content">
-            <div class="box-1">
+            <div class="box-1" id="main-box">
                 <div id="main-exit"><img src="images/exit-icon.png" alt="exit"></div>
-                <div class="content-block" id="main-close">
+                <div class="content-block">
                     <h1>Learn Git and GitHub without any code!</h1>
                     <p>Using the Hello World guide, you’ll create a repository, start a branch, write comments, and open a pull request.</p>
                     <div>
@@ -153,11 +153,18 @@
         </div>
         <!-- Repository news -->
         <div class="news-column">
-            <div class="first-news">
-                123
+            <div class="first-news" id="first-news">
+                <div id="heart"><img src="images/heart-icon.png" alt="heart"></div>
+                <div>
+                    <h5>GitHub Sponsors Matching Fund</h5>
+                    <p>Ready to support open source? GitHub will match your contribution to developers during their first year in GitHub Sponsors.</p>
+                </div>
+                <div id="exit1"><img src="images/exit-icon.png" alt="exit"></div>
             </div>
             <div class="second-news">
-                123
+                <div id="area"><img src="images/area-icon.png" alt="area"></div>
+                <h6>Welcome to the new dashboard. Get closer to the stuff you care about most.</h6>
+                <div id="exit2"><img src="images/exit-icon.png" alt="exit"></div>
             </div>
             <h4>Discover repositories</h4>
             <div class="other-repositories">
@@ -184,9 +191,30 @@
     </script>
     <!-- Window boxes script -->
     <script>
-
+        var exit1 = document.getElementById('main-exit');
+        var box1 = document.getElementById('main-box');
+        exit1.addEventListener('click', function(e){
+            box1.classList.toggle('main-close');
+            e.preventDefault();
+        });
     </script>
-    <!-- Mobile menu nutton script -->
+    <script>
+        var exit2 = document.getElementById('exit1');
+        var box2 = document.getElementById('first-news');
+        exit2.addEventListener('click', function(e){
+            box2.classList.toggle('main-close1');
+            e.preventDefault();
+        });
+    </script>
+    <script>
+        var exit3 = document.getElementById('exit2');
+        var box3 = document.getElementById('second-news');
+        exit3.addEventListener('click', function(e){
+            box3.classList.toggle('main-close2');
+            e.preventDefault();
+        });
+    </script>
+    <!-- Mobile menu button script -->
     <script>
         var menu = document.getElementById('mobile-menu');
         var links = document.getElementById('mobile-links');
