@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title></title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -87,15 +89,19 @@
             <div class="sidebar-content">
                 <div class="new-repository">
                     <p>Repository</p>
-                    <a href="#"><button><img src="images/white-repository-icon.png" alt="white-repository"><p>New</p></button></a>
+                    <a href="#"><button><img src="images/white-repository-icon.png" alt="white-repository">
+                            <p>New</p>
+                        </button></a>
                 </div>
                 <input type="text" name="search" placeholder="Find a repository...">
                 <ul>
                     <li>
-                        <div><img src="images/repository-icon.png" alt="repository"><a href="#">Persi94/GitHub-test</a></div>
+                        <div><img src="images/repository-icon.png" alt="repository"><a href="#">Persi94/GitHub-test</a>
+                        </div>
                     </li>
                     <li>
-                        <div><img src="images/repository-icon.png" alt="repository"><a href="#">Persi94/HTML-test</a></div>
+                        <div><img src="images/repository-icon.png" alt="repository"><a href="#">Persi94/HTML-test</a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -106,10 +112,15 @@
                 <div id="main-exit"><img src="images/exit-icon.png" alt="exit"></div>
                 <div class="content-block">
                     <h1>Learn Git and GitHub without any code!</h1>
-                    <p>Using the Hello World guide, you’ll create a repository, start a branch, write comments, and open a pull request.</p>
+                    <p>Using the Hello World guide, you’ll create a repository, start a branch, write comments, and open
+                        a pull request.</p>
                     <div>
-                        <button class="green-btn"><p>Read the guide</p></button>
-                        <button class="grey-btn"><p>Start a project</p></button>
+                        <button class="green-btn">
+                            <p>Read the guide</p>
+                        </button>
+                        <button class="grey-btn">
+                            <p>Start a project</p>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -119,10 +130,12 @@
                     <input type="text" name="search" placeholder="Find a repository...">
                     <ul>
                         <li>
-                            <div><img src="images/repository-icon.png" alt="repository"><a href="#">Persi94/GitHub-test</a></div>
+                            <div><img src="images/repository-icon.png" alt="repository"><a
+                                    href="#">Persi94/GitHub-test</a></div>
                         </li>
                         <li>
-                            <div><img src="images/repository-icon.png" alt="repository"><a href="#">Persi94/HTML-test</a></div>
+                            <div><img src="images/repository-icon.png" alt="repository"><a
+                                    href="#">Persi94/HTML-test</a></div>
                         </li>
                     </ul>
                 </div>
@@ -136,18 +149,29 @@
                     <div>
                         <div>
                             <img src="images/user-icon.png" alt="user">
-                            <a href="#"><div><h4>JohnDoe</h4><p>12 repositories</p></div></a>
+                            <a href="#">
+                                <div>
+                                    <h4>JohnDoe</h4>
+                                    <p>12 repositories</p>
+                                </div>
+                            </a>
                         </div>
-                        <button class="comment-button"><p>Follow</p></button>
+                        <button class="comment-button">
+                            <p>Follow</p>
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="box-3">
                 <div>
-                    <img src="images/lamp-icon.png" alt="lamp"><p>ProTip! The feed shows you events from people you <a href="#">follow</a> and repositories you <a href="#">watch</a>.</p>
+                    <img src="images/lamp-icon.png" alt="lamp">
+                    <p>ProTip! The feed shows you events from people you <a href="#">follow</a> and repositories you <a
+                            href="#">watch</a>.</p>
                 </div>
                 <div>
-                    <a href="#"><img src="images/signal-icon.png" alt="signal"><p>Subscribe to your news feed</p></a>
+                    <a href="#"><img src="images/signal-icon.png" alt="signal">
+                        <p>Subscribe to your news feed</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -157,11 +181,12 @@
                 <div id="heart"><img src="images/heart-icon.png" alt="heart"></div>
                 <div>
                     <h5>GitHub Sponsors Matching Fund</h5>
-                    <p>Ready to support open source? GitHub will match your contribution to developers during their first year in GitHub Sponsors.</p>
+                    <p>Ready to support open source? GitHub will match your contribution to developers during their
+                        first year in GitHub Sponsors.</p>
                 </div>
                 <div id="exit1"><img src="images/exit-icon.png" alt="exit"></div>
             </div>
-            <div class="second-news">
+            <div class="second-news" id="second-news">
                 <div id="area"><img src="images/area-icon.png" alt="area"></div>
                 <h6>Welcome to the new dashboard. Get closer to the stuff you care about most.</h6>
                 <div id="exit2"><img src="images/exit-icon.png" alt="exit"></div>
@@ -176,52 +201,53 @@
     <script>
         var btn1 = document.getElementById('drop-button-1');
         var dropContent1 = document.getElementById('my-dropdown-1');
-        btn1.addEventListener('click', function(e){
-            dropContent1.classList.toggle('dropdown-show');
+        btn1.addEventListener('click', function (e) {
             e.preventDefault();
+            dropContent1.classList.toggle('dropdown-show');
         });
-    </script>
-    <script>
+
+
         var btn2 = document.getElementById('drop-button-2');
         var dropContent2 = document.getElementById('my-dropdown-2');
-        btn2.addEventListener('click', function(e){
-            dropContent2.classList.toggle('dropdown-show');
+        btn2.addEventListener('click', function (e) {
             e.preventDefault();
+            dropContent2.classList.toggle('dropdown-show');
         });
-    </script>
-    <!-- Window boxes script -->
-    <script>
+
+        // <!-- Window boxes script -->
+
         var exit1 = document.getElementById('main-exit');
         var box1 = document.getElementById('main-box');
-        exit1.addEventListener('click', function(e){
-            box1.classList.toggle('main-close');
+        exit1.addEventListener('click', function (e) {
             e.preventDefault();
+            box1.classList.toggle('main-close');
+
         });
-    </script>
-    <script>
+
+
         var exit2 = document.getElementById('exit1');
         var box2 = document.getElementById('first-news');
-        exit2.addEventListener('click', function(e){
-            box2.classList.toggle('main-close1');
+        exit2.addEventListener('click', function (e) {
             e.preventDefault();
+            box2.classList.toggle('main-close1');
         });
-    </script>
-    <script>
+
         var exit3 = document.getElementById('exit2');
         var box3 = document.getElementById('second-news');
-        exit3.addEventListener('click', function(e){
-            box3.classList.toggle('main-close2');
+        exit3.addEventListener('click', function (e) {
             e.preventDefault();
+            box3.classList.toggle('main-close2');
         });
-    </script>
-    <!-- Mobile menu button script -->
-    <script>
+
+        // <!-- Mobile menu button script -->
+
         var menu = document.getElementById('mobile-menu');
         var links = document.getElementById('mobile-links');
-        menu.addEventListener('click', function(e){
-            links.classList.toggle('mobile-content');
+        menu.addEventListener('click', function (e) {
             e.preventDefault();
+            links.classList.toggle('mobile-content');
         });
     </script>
 </body>
+
 </html>
